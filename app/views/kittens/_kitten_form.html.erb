@@ -1,0 +1,7 @@
+<%= simple_form_for kitten do |f| %>
+  <%= f.input :name %>
+  <%= f.input :age, input_html: { type: "number" } %>
+  <%= f.input :cuteness, input_html: { type: "number" } %>
+  <%= f.input :softness, input_html: { type: "number" } %>
+  <%= f.button :submit %>
+<% end %>

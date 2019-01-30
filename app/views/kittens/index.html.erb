@@ -1,0 +1,15 @@
+<h1>Kittens</h1>
+<% if Kitten.any? %>
+  <ol id="kittens-list">
+    <% Kitten.all.each do |kitten| %>
+      <li class="kitten-item">
+        <h4><%=kitten.name%> <%= link_to "Delete", kitten_path(kitten), method: :delete%></h4>
+        <ul class="kitten-qualities">
+          <li><strong>Age: </strong><%=kitten.age%></li>
+          <li><strong>Cuteness: </strong><%=kitten.cuteness%></li>
+          <li><strong>Softness: </strong><%=kitten.softness%></li>
+        </ul>
+      </li>
+    <% end %>
+  </ol>
+<% end %>
